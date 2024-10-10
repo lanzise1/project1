@@ -1,0 +1,31 @@
+.markdown-content {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  
+  pre {
+    background-color: #f5f5f5; /* 设置代码块的背景色 */
+    padding: 10px;            /* 内边距 */
+    border-radius: 4px;       /* 圆角边框 */
+    overflow: auto;           /* 添加滚动条以防止溢出 */
+  }
+  code {
+    background-color: #f5f5f5; /* 设置内联代码的背景色 */
+    padding: 2px 4px;          /* 内联代码的内边距 */
+    border-radius: 4px;        /* 圆角边框 */
+    font-size: 90%;            /* 缩小字体大小以便更好区分 */
+  }
+}

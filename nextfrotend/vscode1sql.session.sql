@@ -1,0 +1,20 @@
+-- CREATE TABLE orders (
+--     order_id VARCHAR(12) PRIMARY KEY,
+--     customer_name VARCHAR(50),
+--     product VARCHAR(100),
+--     quantity INT,
+--     status VARCHAR(20),
+--     order_date DATE
+-- );
+
+-- INSERT INTO orders (order_id, customer_name, product, quantity, status, order_date) VALUES
+-- ('123456', 'Alice', 'Laptop', 1, '正在处理中', '2024-09-01'),
+-- ('123457', 'Bob', 'Smartphone', 2, '已发货', '2024-09-02'),
+-- ('123458', 'Charlie', 'Tablet', 1, '已取消', '2024-09-03'),
+-- ('123459', 'David', 'Wireless Earbuds', 3, '已完成', '2024-09-04'),
+-- ('123460', 'Eve', 'Smartwatch', 1, '正在处理中', '2024-09-05'),
+-- ('123461', 'Frank', 'Bluetooth Speaker', 4, '已发货', '2024-09-06'),
+-- ('123462', 'Grace', 'Gaming Console', 1, '已完成', '2024-09-07'),
+-- ('123463', 'Heidi', 'Camera', 2, '已取消', '2024-09-08'),
+-- ('123464', 'Ivan', 'Drone', 1, '正在处理中', '2024-09-09'),
+-- ('123465', 'Judy', '4K TV', 1, '已发货', '2024-09-10');

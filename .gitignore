@@ -1,0 +1,51 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+
+# testing
+/coverage
+
+# next.js
+/nextfrotend/.next/
+/nextfrotend/node_modules
+/nextfrotend/.vscode
+/nextfrotend/out/
+
+# production
+/nextfrotend/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# go
+/gobackend/venv
+/gobackend/.vscode
+
+# python
+/pythonchat/.venv
+/pythonchat/.vscode
+
+# local env files
+.env
+# vercel
+.vercel
+.vscode
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+#qwe
+.qweqwe*
+.qweqwe.pub*

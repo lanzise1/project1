@@ -1,0 +1,49 @@
+{
+  "name": "my-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env PORT=8127 next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/next-js": "^2.4.2",
+    "@chakra-ui/react": "^2.10.2",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@prisma/client": "5.19.1",
+    "@reduxjs/toolkit": "^2.2.7",
+    "@types/hast": "^3.0.4",
+    "file-loader": "^6.2.0",
+    "framer-motion": "^11.11.7",
+    "groq-sdk": "^0.7.0",
+    "next": "14.2.5",
+    "openai": "^4.57.0",
+    "quill": "^2.0.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1",
+    "rehype-highlight": "^7.0.0",
+    "rehype-parse": "^9.0.0",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "sass": "^1.78.0",
+    "three": "^0.168.0",
+    "unist-util-visit": "^5.0.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
+    "postcss": "^8",
+    "prisma": "^5.19.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
