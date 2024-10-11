@@ -1,5 +1,19 @@
 "use client"
 import React, { useRef, MouseEvent } from 'react'
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  Button,
+  Portal,
+  Avatar
+} from '@chakra-ui/react'
+import { AiOutlineUser } from 'react-icons/ai'
 import { useUserInfo } from '@/app/hooks/auth/useUserInfo'
 export default function Home() {
   const { userInfo } = useUserInfo()
@@ -12,15 +26,21 @@ export default function Home() {
     window.location.reload()
   }
   return (
-    <div className="flex justify-center flex-col items-center">
-        <div className=' w-40 h-40'>
-          <p>
-            {userInfo?.username}
-          </p>
-          <div className='flex justify-end'>
-            <button  onClick={logout} />
-          </div>
-        </div>
-    </div>
+    <Popover>
+      <PopoverTrigger>
+      <Avatar bg='red.500' icon={<AiOutlineUser fontSize='1.5rem' />} />
+      </PopoverTrigger>
+      <Portal>
+        <PopoverContent>
+          <PopoverArrow />
+          <PopoverHeader>Header</PopoverHeader>
+          <PopoverCloseButton />
+          <PopoverBody>
+            <Button colorScheme='blue'>Button</Button>
+          </PopoverBody>
+          <PopoverFooter>This is the footer</PopoverFooter>
+        </PopoverContent>
+      </Portal>
+    </Popover>
   );
 }

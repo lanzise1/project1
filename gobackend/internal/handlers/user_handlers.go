@@ -7,32 +7,10 @@ import (
 	"myproject/internal/models"
 	"net/http"
 
-	"github.com/gorilla/mux"
-	"github.com/rs/cors"
 	"golang.org/x/crypto/bcrypt"
 )
 
-func SetupRoutes(r *mux.Router, db *sql.DB) {
-	// 创建一个新的CORS中间件
-	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"*"}, // 允许所有来源，您可以根据需要限制特定域名
-		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-		AllowedHeaders:   []string{"*"},
-		AllowCredentials: true,
-	})
-
-	// 将CORS中间件应用到路由器
-	handler := c.Handler(r)
-
-	// 设置路由
-	r.HandleFunc("/user/register", registerHandler(db)).Methods("POST")
-	r.HandleFunc("/user/login", loginHandler(db)).Methods("POST")
-
-	// 使用带有CORS的处理器
-	http.Handle("/", handler)
-}
-
-func registerHandler(db *sql.DB) http.HandlerFunc {
+func RegisterHandler(db *sql.DB) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		var user models.User
 		err := json.NewDecoder(r.Body).Decode(&user)
@@ -60,7 +38,7 @@ func registerHandler(db *sql.DB) http.HandlerFunc {
 	}
 }
 
-func loginHandler(db *sql.DB) http.HandlerFunc {
+func LoginHandler(db *sql.DB) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		log.Println("loginHandler")
 		var user models.User
